@@ -9,15 +9,17 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/yourusername/your-repo.git
+    repoURL: https://github.com/Minhaz00/Demo-ArgoCD.git
     targetRevision: HEAD
     path: Manifest
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: myapp
     
   syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
