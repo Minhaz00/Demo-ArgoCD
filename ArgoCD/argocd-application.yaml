@@ -6,7 +6,7 @@ metadata:
   namespace: argocd
 
 spec:
-  project: default
+  project: my-project
 
   source:
     repoURL: https://github.com/Minhaz00/Demo-ArgoCD.git

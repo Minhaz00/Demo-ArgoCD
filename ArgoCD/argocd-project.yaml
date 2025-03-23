@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: my-project
+  namespace: argocd
+spec:
+  description: "Demo Project for Express App"
+  
+  sourceRepos:
+    - "https://github.com/Minhaz00/Demo-ArgoCD.git"
+  
+  destinations:
+    - namespace: myapp 
+      server: https://kubernetes.default.svc  
+  
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  
