@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 // Root route
 app.get('/', (req, res) => {
-  res.send("Hello from MyApp! Version 1.1");
+  res.send("Hello from MyApp! Version 1.0");
 });
 
 // Health check route
