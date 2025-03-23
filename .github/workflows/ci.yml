@@ -55,6 +55,6 @@ jobs:
       with:
         context: ./App
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-app:1.1
         cache-from: type=gha
         cache-to: type=gha,mode=max 
