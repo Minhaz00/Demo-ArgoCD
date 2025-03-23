@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: argocd-demo-express-app-deployment
+  name: express-app
   labels:
-    app: argocd-demo-express-app
+    app: express
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: argocd-demo-express-app
+      app: express
   template:
     metadata:
       labels:
-        app: argocd-demo-express-app
+        app: express
     spec:
       containers:
-      - name: argocd-demo-express-app
-        image: minhaz71/argocd-demo-express-app:1.0
+      - name: express-app
+        image: minhaz71/express-argocd:latest
         ports:
         - containerPort: 3000

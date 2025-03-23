@@ -5,14 +5,17 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Root route
 app.get('/', (req, res) => {
   res.send("Hello from MyApp! Version 1.0.0");
 });
 
+// Health check route
 app.get('/health', (req, res) => {
   res.send('OK');
 });
 
+// Start the server
 const server = app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
